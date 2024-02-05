@@ -2,6 +2,7 @@ const express=require('express');
 const app=express();
 const multer=require('multer');
 const path=require('path');
+const port=3000;
 
 const folder="./uploads/";
 const storage=multer.diskStorage({
@@ -27,6 +28,6 @@ app.post('/',upload.single('antor'),(req,res)=>{
     res.send('File uploader successfully');
 })
 
-app.listen(3000,(err)=>{
-    console.log('listening at port 3000');
+app.listen(port,(err)=>{
+    console.log(`Listening on port ${port}`);
 })
