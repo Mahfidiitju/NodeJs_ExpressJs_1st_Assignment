@@ -24,7 +24,7 @@ var server=http.createServer((req,res)=>{
     }
     else if(req.url=='/file-write')
     {
-        fs.writeFile('demo.txt','Hello world',(err)=>{
+        fs.writeFile('demo.txt','hello world',(err)=>{
             if(!err)
             {
                 res.writeHead(200,{"content-type":"text/html"});
